@@ -1,0 +1,19 @@
+uuid: 3eefd05e-ec6c-44a3-86bf-eaafc85f1708
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_creator_list
+    - node.type.object
+id: node.object.field_creator_list
+field_name: field_creator_list
+entity_type: node
+bundle: object
+label: 'Creator List'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

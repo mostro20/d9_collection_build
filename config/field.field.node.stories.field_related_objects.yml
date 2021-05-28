@@ -1,0 +1,29 @@
+uuid: 88d69890-e4e1-4da5-b3b8-43c12f6e0a2c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_related_objects
+    - node.type.object
+    - node.type.stories
+id: node.stories.field_related_objects
+field_name: field_related_objects
+entity_type: node
+bundle: stories
+label: 'Related objects'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      object: object
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: creator
+field_type: entity_reference

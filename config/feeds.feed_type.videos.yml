@@ -1,0 +1,110 @@
+uuid: 62cca5a0-d294-417e-a3a1-77cf8f8aa420
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.video.field_artist_stories
+    - field.field.node.video.field_related_objects
+    - field.field.node.video.field_youtube_link
+    - node.type.video
+  module:
+    - feeds_tamper
+    - node
+third_party_settings:
+  feeds_tamper:
+    tampers:
+      522a072d-175e-411e-9f42-0b5a217d9b52:
+        separator: ;
+        limit: null
+        plugin: explode
+        source: accession
+        weight: 0
+        label: Explode
+        uuid: 522a072d-175e-411e-9f42-0b5a217d9b52
+      8c157188-5f70-45e6-b6be-fe28df753004:
+        separator: ;
+        limit: null
+        plugin: explode
+        source: artist
+        weight: 0
+        label: Explode
+        uuid: 8c157188-5f70-45e6-b6be-fe28df753004
+id: videos
+label: Videos
+description: ''
+help: ''
+import_period: -1
+fetcher: directory
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  allowed_schemes:
+    public: public
+  recursive_scan: false
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:node'
+processor_configuration:
+  langcode: en
+  update_existing: 2
+  update_non_existent: _keep
+  expire: -1
+  owner_feed_author: false
+  owner_id: 2
+  authorize: true
+  skip_hash_check: false
+  values:
+    type: video
+custom_sources:
+  resource:
+    label: Resource
+    value: Resource
+    machine_name: resource
+  title:
+    label: Title
+    value: Title
+    machine_name: title
+  artist:
+    label: Artist
+    value: Artist
+    machine_name: artist
+  accession:
+    label: Accession
+    value: Accession
+    machine_name: accession
+mappings:
+  -
+    target: field_youtube_link
+    map:
+      target_id: resource
+    settings:
+      language: ''
+      reference_by: name
+      autocreate: '1'
+  -
+    target: title
+    map:
+      value: title
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: field_artist_stories
+    map:
+      target_id: artist
+    settings:
+      language: null
+      reference_by: title
+      autocreate: false
+      feeds_item: false
+  -
+    target: field_related_objects
+    map:
+      target_id: accession
+    settings:
+      language: null
+      reference_by: title
+      autocreate: false
+      feeds_item: false

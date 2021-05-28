@@ -1,0 +1,19 @@
+uuid: 8b50e9b1-5e0c-46ca-8d65-e84a61cf09d3
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_parent_narrative
+field_name: field_parent_narrative
+entity_type: node
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

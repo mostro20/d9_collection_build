@@ -1,0 +1,8 @@
+uuid: e385b811-bf14-4781-bbca-95cfd9ed163c
+langcode: en
+status: true
+dependencies: {  }
+name: 'Story type'
+vid: story_type
+description: ''
+weight: 0

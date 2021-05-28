@@ -1,0 +1,25 @@
+uuid: 9ebb8dba-1908-4744-a4fc-80deeedda0b0
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - qagoma_barrio
+_core:
+  default_config_hash: sYjScJ6uW1UvGZ-G3AtTcZmPoOiQJtndHqamm8FAFgU
+id: qagoma_barrio_site_branding
+theme: qagoma_barrio
+region: header
+weight: 0
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  provider: system
+  label_display: '0'
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: false
+visibility: {  }

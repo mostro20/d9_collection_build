@@ -1,0 +1,29 @@
+uuid: c6dadadd-a854-4894-a351-8206154adc46
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_place_of_birth
+    - node.type.creator
+    - taxonomy.vocabulary.place
+id: node.creator.field_place_of_birth
+field_name: field_place_of_birth
+entity_type: node
+bundle: creator
+label: 'Place of birth'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      place: place
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

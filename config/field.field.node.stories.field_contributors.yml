@@ -1,0 +1,29 @@
+uuid: c6bc173d-2b73-45ff-bfc1-54dcc556eb79
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_contributors
+    - node.type.stories
+    - taxonomy.vocabulary.authors
+id: node.stories.field_contributors
+field_name: field_contributors
+entity_type: node
+bundle: stories
+label: Contributors
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      authors: authors
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

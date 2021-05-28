@@ -1,0 +1,23 @@
+uuid: ed87a230-7171-4dc9-a372-b35e3742cf2d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_inter
+    - node.type.creator
+id: node.creator.field_inter
+field_name: field_inter
+entity_type: node
+bundle: creator
+label: 'Internal ID'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

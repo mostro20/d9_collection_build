@@ -1,0 +1,19 @@
+uuid: e72c4163-a3a8-454f-a3c4-2579d626fcfd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_dimensions_b
+    - node.type.object
+id: node.object.field_dimensions_b
+field_name: field_dimensions_b
+entity_type: node
+bundle: object
+label: 'Dimensions B'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

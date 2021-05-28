@@ -1,0 +1,8 @@
+uuid: 35d5ca74-4df2-4e82-800b-62798aa540fc
+langcode: en
+status: true
+dependencies: {  }
+name: Place
+vid: place
+description: ''
+weight: 0

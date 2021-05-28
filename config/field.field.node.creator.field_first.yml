@@ -1,0 +1,19 @@
+uuid: c272274e-d9c2-491a-bce9-8ea36ccb9928
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_first
+    - node.type.creator
+id: node.creator.field_first
+field_name: field_first
+entity_type: node
+bundle: creator
+label: 'First Name'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

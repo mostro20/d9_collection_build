@@ -1,0 +1,84 @@
+uuid: 174153ff-4025-4a6e-bb98-de20ca101c4a
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.object.body
+    - field.field.node.object.feeds_item
+    - field.field.node.object.field_accession_no_
+    - field.field.node.object.field_creation_date_range
+    - field.field.node.object.field_creator_list
+    - field.field.node.object.field_date_created
+    - field.field.node.object.field_department
+    - field.field.node.object.field_dimensions
+    - field.field.node.object.field_dimensions_b
+    - field.field.node.object.field_edition
+    - field.field.node.object.field_format
+    - field.field.node.object.field_high_resolution_image
+    - field.field.node.object.field_image_carousel
+    - field.field.node.object.field_image_reference
+    - field.field.node.object.field_image_reference_thumb
+    - field.field.node.object.field_image_sliders
+    - field.field.node.object.field_inter
+    - field.field.node.object.field_medium
+    - field.field.node.object.field_medium_statement
+    - field.field.node.object.field_obj_3d_file
+    - field.field.node.object.field_physical_location
+    - field.field.node.object.field_place_created
+    - field.field.node.object.field_publisher
+    - field.field.node.object.field_secondary_type_category
+    - field.field.node.object.field_source
+    - field.field.node.object.field_subjects
+    - field.field.node.object.field_support
+    - field.field.node.object.field_type
+    - node.type.object
+  module:
+    - text
+    - user
+id: node.object.teaser
+targetEntityType: node
+bundle: object
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  feeds_item: true
+  field_accession_no_: true
+  field_creation_date_range: true
+  field_creator_list: true
+  field_date_created: true
+  field_department: true
+  field_dimensions: true
+  field_dimensions_b: true
+  field_edition: true
+  field_format: true
+  field_high_resolution_image: true
+  field_image_carousel: true
+  field_image_reference: true
+  field_image_reference_thumb: true
+  field_image_sliders: true
+  field_inter: true
+  field_medium: true
+  field_medium_statement: true
+  field_obj_3d_file: true
+  field_physical_location: true
+  field_place_created: true
+  field_publisher: true
+  field_secondary_type_category: true
+  field_source: true
+  field_subjects: true
+  field_support: true
+  field_type: true

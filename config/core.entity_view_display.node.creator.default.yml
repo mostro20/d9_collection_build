@@ -1,0 +1,124 @@
+uuid: 3d5e0850-2657-40f1-81fb-66b528f38d1c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.creator.field_cultural_identity
+    - field.field.node.creator.field_date_of_birth
+    - field.field.node.creator.field_date_of_death
+    - field.field.node.creator.field_first
+    - field.field.node.creator.field_inter
+    - field.field.node.creator.field_last_name
+    - field.field.node.creator.field_organisation
+    - field.field.node.creator.field_place_of_birth
+    - field.field.node.creator.field_place_of_death
+    - field.field.node.creator.field_principle_country
+    - field.field.node.creator.field_related_objects
+    - field.field.node.creator.field_subjects
+    - node.type.creator
+  module:
+    - datetime
+    - taxonomy
+    - user
+id: node.creator.default
+targetEntityType: node
+bundle: creator
+mode: default
+content:
+  field_cultural_identity:
+    weight: 2
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_date_of_birth:
+    type: datetime_default
+    weight: 3
+    region: content
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: short_date
+    third_party_settings: {  }
+  field_date_of_death:
+    type: datetime_default
+    weight: 4
+    region: content
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: short_date
+    third_party_settings: {  }
+  field_first:
+    type: string
+    weight: 5
+    region: content
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_last_name:
+    type: string
+    weight: 6
+    region: content
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_organisation:
+    type: string
+    weight: 7
+    region: content
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_place_of_birth:
+    type: entity_reference_label
+    weight: 8
+    region: content
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+  field_place_of_death:
+    type: entity_reference_label
+    weight: 9
+    region: content
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+  field_principle_country:
+    type: entity_reference_label
+    weight: 10
+    region: content
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+  field_related_objects:
+    type: entity_reference_entity_view
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      view_mode: teaser
+      link: false
+    third_party_settings: {  }
+  field_subjects:
+    type: entity_reference_rss_category
+    weight: 11
+    region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_inter: true

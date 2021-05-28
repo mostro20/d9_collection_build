@@ -1,0 +1,19 @@
+uuid: a94d5b2a-a1dd-468c-860c-ad9e55bf5bbb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_physical_location
+    - node.type.object
+id: node.object.field_physical_location
+field_name: field_physical_location
+entity_type: node
+bundle: object
+label: 'Physical location'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

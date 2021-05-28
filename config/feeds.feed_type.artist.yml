@@ -1,0 +1,194 @@
+uuid: f185c55d-705c-4e1c-b8ac-5886082c0f60
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.creator.field_cultural_identity
+    - field.field.node.creator.field_date_of_birth
+    - field.field.node.creator.field_date_of_death
+    - field.field.node.creator.field_first
+    - field.field.node.creator.field_inter
+    - field.field.node.creator.field_last_name
+    - field.field.node.creator.field_place_of_birth
+    - field.field.node.creator.field_place_of_death
+    - field.field.node.creator.field_principle_country
+    - field.field.node.creator.field_related_objects
+    - node.type.creator
+  module:
+    - feeds_tamper
+    - node
+third_party_settings:
+  feeds_tamper:
+    tampers:
+      56e7fabe-178c-4818-a8ab-ba3c13bfd92c:
+        separator: ;
+        limit: null
+        plugin: explode
+        source: ecatalogue_key2
+        weight: 0
+        label: Explode
+        uuid: 56e7fabe-178c-4818-a8ab-ba3c13bfd92c
+id: artist
+label: Artist
+description: ''
+help: ''
+import_period: -1
+fetcher: directory
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  allowed_schemes:
+    public: public
+  recursive_scan: false
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:node'
+processor_configuration:
+  langcode: en
+  update_existing: 0
+  update_non_existent: _keep
+  expire: -1
+  owner_feed_author: false
+  owner_id: 2
+  authorize: true
+  skip_hash_check: false
+  values:
+    type: creator
+custom_sources:
+  ecatalogue_key:
+    label: ecatalogue_key
+    value: ecatalogue_key
+    machine_name: ecatalogue_key
+  creatorsummarydata:
+    label: CreatorSummaryData
+    value: CreatorSummaryData
+    machine_name: creatorsummarydata
+  ecatalogue_key2:
+    label: ecatalogue_key
+    value: ecatalogue_key
+    machine_name: ecatalogue_key2
+  creatorsummarydata2:
+    label: CreatorSummaryData
+    value: CreatorSummaryData
+    machine_name: creatorsummarydata2
+  creatorirn:
+    label: CreatorIRN
+    value: CreatorIRN
+    machine_name: creatorirn
+  creatorgivenname:
+    label: CreatorGivenName
+    value: CreatorGivenName
+    machine_name: creatorgivenname
+  creatorsurname:
+    label: CreatorSurname
+    value: CreatorSurname
+    machine_name: creatorsurname
+  creatorplaceofbirth:
+    label: CreatorPlaceOfBirth
+    value: CreatorPlaceOfBirth
+    machine_name: creatorplaceofbirth
+  creatorplaceofdeath:
+    label: CreatorPlaceOfDeath
+    value: CreatorPlaceOfDeath
+    machine_name: creatorplaceofdeath
+  creatordateofbirth:
+    label: CreatorDateOfBirth
+    value: CreatorDateOfBirth
+    machine_name: creatordateofbirth
+  creatordateofdeath:
+    label: CreatorDateOfDeath
+    value: CreatorDateOfDeath
+    machine_name: creatordateofdeath
+  country:
+    label: Country
+    value: Country
+    machine_name: country
+  bioculturalidentity1:
+    label: BioCulturalIdentity1
+    value: BioCulturalIdentity1
+    machine_name: bioculturalidentity1
+mappings:
+  -
+    target: field_related_objects
+    map:
+      target_id: ecatalogue_key2
+    settings:
+      reference_by: field_inter
+      feeds_item: guid
+      autocreate: 0
+      language: null
+  -
+    target: title
+    map:
+      value: creatorsummarydata2
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: field_inter
+    map:
+      value: creatorirn
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: field_first
+    map:
+      value: creatorgivenname
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: field_last_name
+    map:
+      value: creatorsurname
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: field_place_of_birth
+    map:
+      target_id: creatorplaceofbirth
+    settings:
+      language: ''
+      reference_by: name
+      autocreate: '1'
+  -
+    target: field_place_of_death
+    map:
+      target_id: creatorplaceofdeath
+    settings:
+      language: ''
+      reference_by: name
+      autocreate: '1'
+  -
+    target: field_date_of_birth
+    map:
+      value: creatordateofbirth
+    settings:
+      language: ''
+      timezone: UTC
+  -
+    target: field_date_of_death
+    map:
+      value: creatordateofdeath
+    settings:
+      language: null
+      timezone: UTC
+  -
+    target: field_principle_country
+    map:
+      target_id: country
+    settings:
+      language: ''
+      reference_by: name
+      autocreate: '1'
+  -
+    target: field_cultural_identity
+    map:
+      value: bioculturalidentity1
+    unique: {  }
+    settings:
+      language: null

@@ -1,0 +1,19 @@
+uuid: 365ab928-7e9c-48e0-982d-96c68b5313ca
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_image_reference_thumb
+    - node.type.object
+id: node.object.field_image_reference_thumb
+field_name: field_image_reference_thumb
+entity_type: node
+bundle: object
+label: 'Image reference thumb'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

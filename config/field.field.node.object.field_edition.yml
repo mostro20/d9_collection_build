@@ -1,0 +1,19 @@
+uuid: 7acf1dd4-90ef-4c71-88bc-b4caf5fa4412
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_edition
+    - node.type.object
+id: node.object.field_edition
+field_name: field_edition
+entity_type: node
+bundle: object
+label: Edition
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

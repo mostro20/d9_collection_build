@@ -1,0 +1,19 @@
+uuid: 5b7b8ec8-7656-49ab-a027-8c26b90cf65a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_cultural_identity
+    - node.type.creator
+id: node.creator.field_cultural_identity
+field_name: field_cultural_identity
+entity_type: node
+bundle: creator
+label: 'Cultural Identity'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

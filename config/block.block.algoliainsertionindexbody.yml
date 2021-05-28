@@ -1,0 +1,25 @@
+uuid: 0274235c-6b0d-4d45-92cf-1f164565c8b4
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:b7a8e70c-10ca-43c8-9da7-377260dad6c5'
+  module:
+    - block_content
+  theme:
+    - qagoma_barrio
+id: algoliainsertionindexbody
+theme: qagoma_barrio
+region: content
+weight: -2
+provider: null
+plugin: 'block_content:b7a8e70c-10ca-43c8-9da7-377260dad6c5'
+settings:
+  id: 'block_content:b7a8e70c-10ca-43c8-9da7-377260dad6c5'
+  label: 'Algolia insertion - index body'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

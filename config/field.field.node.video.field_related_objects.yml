@@ -1,0 +1,29 @@
+uuid: abae5424-b2ff-4834-a6dd-2ffcb97a86ce
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_related_objects
+    - node.type.object
+    - node.type.video
+id: node.video.field_related_objects
+field_name: field_related_objects
+entity_type: node
+bundle: video
+label: 'Related objects'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      object: object
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

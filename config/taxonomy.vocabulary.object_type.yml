@@ -1,0 +1,8 @@
+uuid: a70635e2-5c75-4efe-8087-2d6e933da5a5
+langcode: en
+status: true
+dependencies: {  }
+name: 'Object type'
+vid: object_type
+description: ''
+weight: 0

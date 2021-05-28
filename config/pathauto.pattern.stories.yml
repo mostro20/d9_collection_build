@@ -1,0 +1,22 @@
+uuid: 403f35a6-54a1-459c-b926-3b74ef0dfd0f
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: stories
+label: Stories
+type: 'canonical_entities:node'
+pattern: 'stories/[node:field_inter]'
+selection_criteria:
+  0b3714e4-02f6-4690-a11e-f73517262394:
+    id: node_type
+    bundles:
+      stories: stories
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 0b3714e4-02f6-4690-a11e-f73517262394
+selection_logic: and
+weight: -5
+relationships: {  }

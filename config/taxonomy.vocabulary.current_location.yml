@@ -1,0 +1,8 @@
+uuid: 10e7b07b-f29a-4699-8ae0-296887de3842
+langcode: en
+status: true
+dependencies: {  }
+name: 'Current location'
+vid: current_location
+description: ''
+weight: 0

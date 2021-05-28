@@ -1,0 +1,29 @@
+uuid: ec9cb20d-077e-4fe4-9945-9748369c7cda
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_narrative_type
+    - node.type.stories
+    - taxonomy.vocabulary.narrative_function
+id: node.stories.field_narrative_type
+field_name: field_narrative_type
+entity_type: node
+bundle: stories
+label: 'Narrative Function'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      narrative_function: narrative_function
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

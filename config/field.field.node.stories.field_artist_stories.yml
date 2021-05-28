@@ -1,0 +1,28 @@
+uuid: c4c855e3-9536-460b-a84a-e61eb56691c5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_artist_stories
+    - node.type.creator
+    - node.type.stories
+id: node.stories.field_artist_stories
+field_name: field_artist_stories
+entity_type: node
+bundle: stories
+label: 'Artist Stories'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      creator: creator
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: creator
+field_type: entity_reference

@@ -1,0 +1,19 @@
+uuid: b2e3641d-4638-444a-a324-de1c607ca759
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_image_reference
+    - node.type.object
+id: node.object.field_image_reference
+field_name: field_image_reference
+entity_type: node
+bundle: object
+label: 'Image reference'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

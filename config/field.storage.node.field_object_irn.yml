@@ -1,0 +1,20 @@
+uuid: 10c28f06-4f55-4bb2-a3e2-e805c8f7dc72
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_object_irn
+field_name: field_object_irn
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

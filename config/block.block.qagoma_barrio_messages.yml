@@ -1,0 +1,22 @@
+uuid: 19eee60b-db39-4913-99bf-189424ba977e
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - qagoma_barrio
+_core:
+  default_config_hash: KfyaTPRJEcAyy2e5AxEfWQnuHcn4WrfvcWek7lSmHZQ
+id: qagoma_barrio_messages
+theme: qagoma_barrio
+region: highlighted
+weight: -5
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

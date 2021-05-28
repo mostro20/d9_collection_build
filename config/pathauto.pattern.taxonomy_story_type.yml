@@ -1,0 +1,23 @@
+uuid: f32482cc-7685-48cf-9ef5-305b3008c268
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools
+    - taxonomy
+id: taxonomy_story_type
+label: 'Taxonomy - Story type'
+type: 'canonical_entities:taxonomy_term'
+pattern: 'story-type/[term:name]'
+selection_criteria:
+  c952f459-9072-4a2e-a3b5-9fbd087a1010:
+    id: 'entity_bundle:taxonomy_term'
+    bundles:
+      story_type: story_type
+    negate: false
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    uuid: c952f459-9072-4a2e-a3b5-9fbd087a1010
+selection_logic: and
+weight: -5
+relationships: {  }

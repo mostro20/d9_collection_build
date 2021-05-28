@@ -1,0 +1,19 @@
+uuid: 2ed522fa-a065-4fd9-9d80-41155888a17b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_support
+    - node.type.object
+id: node.object.field_support
+field_name: field_support
+entity_type: node
+bundle: object
+label: Support
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

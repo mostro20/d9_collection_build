@@ -1,0 +1,23 @@
+uuid: b139c977-071f-44d7-8a81-06bab44a4606
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools
+    - taxonomy
+id: taxonomy_authors
+label: 'Taxonomy - Authors'
+type: 'canonical_entities:taxonomy_term'
+pattern: 'authors/[term:name]'
+selection_criteria:
+  5d2bf198-7742-499b-83fe-6060195d524f:
+    id: 'entity_bundle:taxonomy_term'
+    bundles:
+      authors: authors
+    negate: false
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    uuid: 5d2bf198-7742-499b-83fe-6060195d524f
+selection_logic: and
+weight: -5
+relationships: {  }

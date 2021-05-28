@@ -1,0 +1,21 @@
+uuid: 22bff7a9-2112-4d4d-a04c-76ce68925c39
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_dimensions
+field_name: field_dimensions
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

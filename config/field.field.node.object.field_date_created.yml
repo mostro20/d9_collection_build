@@ -1,0 +1,19 @@
+uuid: cf520c25-64dd-4cac-88cc-7e567326d216
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date_created
+    - node.type.object
+id: node.object.field_date_created
+field_name: field_date_created
+entity_type: node
+bundle: object
+label: 'Date created'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

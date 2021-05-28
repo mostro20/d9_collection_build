@@ -1,0 +1,223 @@
+uuid: 82244734-5fd0-4ea5-a2ce-15b3eab5108d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.stories.field_artist_stories
+    - field.field.node.stories.field_author
+    - field.field.node.stories.field_contributors
+    - field.field.node.stories.field_inter
+    - field.field.node.stories.field_narrative_type
+    - field.field.node.stories.field_parent_narrative
+    - field.field.node.stories.field_publication
+    - field.field.node.stories.field_related_objects
+    - field.field.node.stories.field_subjects
+    - node.type.stories
+  module:
+    - feeds_tamper
+    - node
+third_party_settings:
+  feeds_tamper:
+    tampers:
+      3245851e-c154-4af7-82a7-9e6d3bd2e555:
+        separator: ;
+        limit: null
+        plugin: explode
+        source: subjects
+        weight: 0
+        label: Explode
+        uuid: 3245851e-c154-4af7-82a7-9e6d3bd2e555
+      ef1dac87-d76f-4555-94a2-2404adcb9c22:
+        separator: ;
+        limit: null
+        plugin: explode
+        source: authors
+        weight: 0
+        label: Explode
+        uuid: ef1dac87-d76f-4555-94a2-2404adcb9c22
+      1c09f5d5-5075-4126-8949-88b7bfdbc825:
+        separator: ;
+        limit: null
+        plugin: explode
+        source: contributors
+        weight: 0
+        label: Explode
+        uuid: 1c09f5d5-5075-4126-8949-88b7bfdbc825
+      4f147fec-eb85-4bfd-ab61-5adf3453b212:
+        separator: ;
+        limit: null
+        plugin: explode
+        source: ecatalogue_key
+        weight: 0
+        label: Explode
+        uuid: 4f147fec-eb85-4bfd-ab61-5adf3453b212
+      1cd6c8bf-6aee-4758-9fe7-4e3ba1ff068b:
+        separator: ;
+        limit: null
+        plugin: explode
+        source: partiesirn
+        weight: 0
+        label: Explode
+        uuid: 1cd6c8bf-6aee-4758-9fe7-4e3ba1ff068b
+      d82253f8-c6cc-4617-981a-53881c4fbb12:
+        separator: ;
+        limit: null
+        plugin: explode
+        source: masterirn
+        weight: 0
+        label: Explode
+        uuid: d82253f8-c6cc-4617-981a-53881c4fbb12
+id: narrative
+label: Narrative
+description: ''
+help: ''
+import_period: -1
+fetcher: directory
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  allowed_schemes:
+    public: public
+  recursive_scan: false
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:node'
+processor_configuration:
+  langcode: en
+  update_existing: 0
+  update_non_existent: _keep
+  expire: -1
+  owner_feed_author: false
+  owner_id: 2
+  authorize: true
+  skip_hash_check: false
+  values:
+    type: stories
+custom_sources:
+  title:
+    label: Title
+    value: Title
+    machine_name: title
+  narrativeirn:
+    label: NarrativeIRN
+    value: NarrativeIRN
+    machine_name: narrativeirn
+  subjects:
+    label: Subjects
+    value: Subjects
+    machine_name: subjects
+  authors:
+    label: Authors
+    value: Authors
+    machine_name: authors
+  contributors:
+    label: Contributors
+    value: Contributors
+    machine_name: contributors
+  ecatalogue_key:
+    label: ecatalogue_key
+    value: ecatalogue_key
+    machine_name: ecatalogue_key
+  partiesirn:
+    label: PartiesIRN
+    value: PartiesIRN
+    machine_name: partiesirn
+  linked_publication:
+    label: 'Linked Publication'
+    value: 'Linked Publication'
+    machine_name: linked_publication
+  purpose:
+    label: Purpose
+    value: Purpose
+    machine_name: purpose
+  narrative:
+    label: Narrative
+    value: Narrative
+    machine_name: narrative
+  masterirn:
+    label: MasterIRN
+    value: MasterIRN
+    machine_name: masterirn
+mappings:
+  -
+    target: title
+    map:
+      value: title
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: field_inter
+    map:
+      value: narrativeirn
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: field_subjects
+    map:
+      target_id: subjects
+    settings:
+      language: ''
+      reference_by: name
+      autocreate: '1'
+  -
+    target: field_author
+    map:
+      target_id: authors
+    settings:
+      language: ''
+      reference_by: name
+      autocreate: '1'
+  -
+    target: field_contributors
+    map:
+      target_id: contributors
+    settings:
+      language: ''
+      reference_by: name
+      autocreate: '1'
+  -
+    target: field_related_objects
+    map:
+      target_id: ecatalogue_key
+    settings:
+      language: ''
+      reference_by: field_object_irn
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_artist_stories
+    map:
+      target_id: partiesirn
+    settings:
+      language: ''
+      reference_by: field_inter
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_publication
+    map:
+      value: linked_publication
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: field_narrative_type
+    map:
+      target_id: purpose
+    settings:
+      language: ''
+      reference_by: name
+      autocreate: '1'
+  -
+    target: field_parent_narrative
+    map:
+      target_id: masterirn
+    settings:
+      language: ''
+      reference_by: field_inter
+      feeds_item: guid
+      autocreate: 0

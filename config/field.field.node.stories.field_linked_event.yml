@@ -1,0 +1,19 @@
+uuid: fd246e4c-eee2-4ead-848f-0b9356bb3060
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_linked_event
+    - node.type.stories
+id: node.stories.field_linked_event
+field_name: field_linked_event
+entity_type: node
+bundle: stories
+label: 'Linked event'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

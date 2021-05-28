@@ -1,0 +1,22 @@
+uuid: e1f5f8b7-fdae-4323-810b-d6e0ed6c196b
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: creator
+label: Creator
+type: 'canonical_entities:node'
+pattern: 'creators/[node:title]'
+selection_criteria:
+  facdd707-1b8b-4c27-a719-af2bd6ab0fe7:
+    id: node_type
+    bundles:
+      creator: creator
+    negate: false
+    context_mapping:
+      node: node
+    uuid: facdd707-1b8b-4c27-a719-af2bd6ab0fe7
+selection_logic: and
+weight: -5
+relationships: {  }

@@ -1,0 +1,21 @@
+uuid: 51675591-feaa-406a-9c42-bf85d2d7e03e
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_image_reference_thumb
+field_name: field_image_reference_thumb
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

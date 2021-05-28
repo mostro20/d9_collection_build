@@ -1,0 +1,74 @@
+uuid: de6a3d22-cf60-47cb-b75a-8edc615c3c73
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.object.field_medium
+    - node.type.object
+  module:
+    - feeds_tamper
+    - node
+third_party_settings:
+  feeds_tamper:
+    tampers:
+      bf187ad3-ef44-4f4a-9b6d-8f283caae4e9:
+        separator: ;
+        limit: null
+        plugin: explode
+        source: medium
+        weight: 0
+        label: Explode
+        uuid: bf187ad3-ef44-4f4a-9b6d-8f283caae4e9
+id: object_test
+label: 'Object test'
+description: ''
+help: ''
+import_period: -1
+fetcher: directory
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  allowed_schemes:
+    public: public
+  recursive_scan: false
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:node'
+processor_configuration:
+  langcode: en
+  update_existing: 0
+  update_non_existent: _keep
+  expire: -1
+  owner_feed_author: false
+  owner_id: 1
+  authorize: true
+  skip_hash_check: false
+  values:
+    type: object
+custom_sources:
+  title:
+    label: Title
+    value: Title
+    machine_name: title
+  medium:
+    label: Medium
+    value: Medium
+    machine_name: medium
+mappings:
+  -
+    target: title
+    map:
+      value: title
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: field_medium
+    map:
+      target_id: medium
+    settings:
+      language: ''
+      reference_by: name
+      autocreate: '1'

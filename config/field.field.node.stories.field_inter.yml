@@ -1,0 +1,23 @@
+uuid: 0dedeb76-103e-4c5a-951b-78bcfaae81f4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_inter
+    - node.type.stories
+id: node.stories.field_inter
+field_name: field_inter
+entity_type: node
+bundle: stories
+label: 'Internal ID'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

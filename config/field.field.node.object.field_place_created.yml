@@ -1,0 +1,29 @@
+uuid: e4973421-7215-459c-94ea-e526381a1e66
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_place_created
+    - node.type.object
+    - taxonomy.vocabulary.place
+id: node.object.field_place_created
+field_name: field_place_created
+entity_type: node
+bundle: object
+label: 'Place created'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      place: place
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

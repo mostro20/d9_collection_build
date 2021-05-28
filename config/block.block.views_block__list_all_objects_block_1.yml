@@ -1,0 +1,29 @@
+uuid: dabbe298-f70a-4dbd-8c1d-1f68f7eb7f9c
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.list_all_objects
+  module:
+    - system
+    - views
+  theme:
+    - qagoma_barrio
+id: views_block__list_all_objects_block_1
+theme: qagoma_barrio
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:list_all_objects-block_1'
+settings:
+  id: 'views_block:list_all_objects-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false

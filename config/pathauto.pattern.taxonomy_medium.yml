@@ -1,0 +1,23 @@
+uuid: 7bfb7b15-cb66-4f0a-9997-9e1b4d824690
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools
+    - taxonomy
+id: taxonomy_medium
+label: 'Taxonomy - medium'
+type: 'canonical_entities:taxonomy_term'
+pattern: 'medium/[term:name]'
+selection_criteria:
+  39a96642-8f5f-4212-9c87-cb4505008a42:
+    id: 'entity_bundle:taxonomy_term'
+    bundles:
+      medium: medium
+    negate: false
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    uuid: 39a96642-8f5f-4212-9c87-cb4505008a42
+selection_logic: and
+weight: -5
+relationships: {  }

@@ -1,0 +1,21 @@
+uuid: 2158b7b0-6c5c-4b4b-aa50-100bff0b34ed
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date
+    - node.type.stories
+  module:
+    - datetime
+id: node.stories.field_date
+field_name: field_date
+entity_type: node
+bundle: stories
+label: Date
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

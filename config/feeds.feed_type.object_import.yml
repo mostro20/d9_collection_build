@@ -1,0 +1,310 @@
+uuid: f4c44a16-3fab-4e17-9ce5-8474e0d7b882
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.object.field_accession_no_
+    - field.field.node.object.field_creation_date_range
+    - field.field.node.object.field_creator_list
+    - field.field.node.object.field_date_created
+    - field.field.node.object.field_department
+    - field.field.node.object.field_dimensions
+    - field.field.node.object.field_dimensions_b
+    - field.field.node.object.field_edition
+    - field.field.node.object.field_format
+    - field.field.node.object.field_image_reference
+    - field.field.node.object.field_inter
+    - field.field.node.object.field_medium_statement
+    - field.field.node.object.field_physical_location
+    - field.field.node.object.field_place_created
+    - field.field.node.object.field_secondary_type_category
+    - field.field.node.object.field_source
+    - field.field.node.object.field_subjects
+    - field.field.node.object.field_support
+    - field.field.node.object.field_type
+    - node.type.object
+  module:
+    - feeds_tamper
+    - node
+third_party_settings:
+  feeds_tamper:
+    tampers:
+      55a45fb8-e688-4d40-8e41-54255495da58:
+        separator: ;
+        limit: null
+        plugin: explode
+        source: subjects
+        weight: 0
+        label: Explode
+        uuid: 55a45fb8-e688-4d40-8e41-54255495da58
+id: object_import
+label: 'Object v2'
+description: ''
+help: ''
+import_period: -1
+fetcher: directory
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  allowed_schemes:
+    public: public
+  recursive_scan: false
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:node'
+processor_configuration:
+  langcode: en
+  update_existing: 0
+  update_non_existent: _keep
+  expire: -1
+  owner_feed_author: false
+  owner_id: 2
+  authorize: true
+  skip_hash_check: false
+  values:
+    type: object
+custom_sources:
+  '':
+    label: ''
+    value: ''
+    machine_name: ''
+  ecatalogue_key:
+    label: ecatalogue_key
+    value: ecatalogue_key
+    machine_name: ecatalogue_key
+  accession_no_:
+    label: 'Accession No.'
+    value: 'Accession No.'
+    machine_name: accession_no_
+  credit_line:
+    label: 'Credit Line'
+    value: 'Credit Line'
+    machine_name: credit_line
+  title:
+    label: Title
+    value: Title
+    machine_name: title
+  place_of_execution:
+    label: 'Place of execution'
+    value: 'Place of execution'
+    machine_name: place_of_execution
+  medium:
+    label: Medium
+    value: Medium
+    machine_name: medium
+  main_measurement:
+    label: 'Main measurement'
+    value: 'Main measurement'
+    machine_name: main_measurement
+  secondary_measurement:
+    label: 'Secondary measurement'
+    value: 'Secondary measurement'
+    machine_name: secondary_measurement
+  date_created:
+    label: 'Date Created'
+    value: 'Date Created'
+    machine_name: date_created
+  format:
+    label: Format
+    value: Format
+    machine_name: format
+  earliestdate:
+    label: EarliestDate
+    value: EarliestDate
+    machine_name: earliestdate
+  latestdate:
+    label: LatestDate
+    value: LatestDate
+    machine_name: latestdate
+  physical_support:
+    label: 'Physical support'
+    value: 'Physical support'
+    machine_name: physical_support
+  edition:
+    label: Edition
+    value: Edition
+    machine_name: edition
+  qagoma_department:
+    label: 'QAGOMA Department'
+    value: 'QAGOMA Department'
+    machine_name: qagoma_department
+  primary_media:
+    label: 'Primary Media'
+    value: 'Primary Media'
+    machine_name: primary_media
+  secondary_media:
+    label: 'Secondary Media'
+    value: 'Secondary Media'
+    machine_name: secondary_media
+  qagoma_location:
+    label: 'QAGOMA Location'
+    value: 'QAGOMA Location'
+    machine_name: qagoma_location
+  url:
+    label: URL
+    value: URL
+    machine_name: url
+  subjects:
+    label: Subjects
+    value: Subjects
+    machine_name: subjects
+  mediumtext:
+    label: MediumText
+    value: MediumText
+    machine_name: mediumtext
+  irn:
+    label: IRN
+    value: IRN
+    machine_name: irn
+  creators:
+    label: Creators
+    value: Creators
+    machine_name: creators
+mappings:
+  -
+    target: field_inter
+    map:
+      value: ecatalogue_key
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: field_accession_no_
+    map:
+      value: accession_no_
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: field_source
+    map:
+      value: credit_line
+    settings:
+      language: null
+  -
+    target: title
+    map:
+      value: title
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: field_place_created
+    map:
+      target_id: place_of_execution
+    settings:
+      reference_by: name
+      autocreate: '1'
+      language: null
+  -
+    target: field_format
+    map:
+      value: medium
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: field_dimensions
+    map:
+      value: main_measurement
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: field_dimensions_b
+    map:
+      value: secondary_measurement
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: field_date_created
+    map:
+      value: date_created
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: field_creation_date_range
+    map:
+      value: earliestdate
+      end_value: latestdate
+    settings:
+      timezone: Australia/Brisbane
+      language: null
+  -
+    target: field_support
+    map:
+      value: physical_support
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: field_edition
+    map:
+      value: edition
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: field_department
+    map:
+      target_id: qagoma_department
+    settings:
+      reference_by: name
+      autocreate: '1'
+      language: null
+  -
+    target: field_type
+    map:
+      target_id: primary_media
+    settings:
+      reference_by: name
+      autocreate: '1'
+      language: null
+  -
+    target: field_secondary_type_category
+    map:
+      target_id: secondary_media
+    settings:
+      reference_by: name
+      autocreate: '1'
+      language: null
+  -
+    target: field_physical_location
+    map:
+      value: qagoma_location
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: field_image_reference
+    map:
+      value: url
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: field_subjects
+    map:
+      target_id: subjects
+    settings:
+      reference_by: name
+      autocreate: '1'
+      language: null
+  -
+    target: field_medium_statement
+    map:
+      value: mediumtext
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: field_creator_list
+    map:
+      value: creators
+    unique: {  }
+    settings:
+      language: null

@@ -1,0 +1,25 @@
+uuid: 96c572fb-e1aa-4461-9047-8784af860a69
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:5f714afb-e5c8-40f0-8234-115b9d62bf48'
+  module:
+    - block_content
+  theme:
+    - qagoma_barrio
+id: footerstatement
+theme: qagoma_barrio
+region: footer_fifth
+weight: 0
+provider: null
+plugin: 'block_content:5f714afb-e5c8-40f0-8234-115b9d62bf48'
+settings:
+  id: 'block_content:5f714afb-e5c8-40f0-8234-115b9d62bf48'
+  label: 'Footer statement'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

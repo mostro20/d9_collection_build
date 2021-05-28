@@ -1,0 +1,8 @@
+uuid: 66ec7e59-49f7-40d2-b184-331c15884641
+langcode: en
+status: true
+dependencies: {  }
+name: 'Narrative function'
+vid: narrative_function
+description: ''
+weight: 0

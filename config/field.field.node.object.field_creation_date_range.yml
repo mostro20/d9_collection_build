@@ -1,0 +1,21 @@
+uuid: ce0d3a1d-5948-4de0-9adf-7d23e57633cb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_creation_date_range
+    - node.type.object
+  module:
+    - datetime_range
+id: node.object.field_creation_date_range
+field_name: field_creation_date_range
+entity_type: node
+bundle: object
+label: 'Creation date range'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: daterange

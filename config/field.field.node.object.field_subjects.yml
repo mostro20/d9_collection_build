@@ -1,0 +1,29 @@
+uuid: 1f385c30-3ba3-4364-b98a-734c3975722e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_subjects
+    - node.type.object
+    - taxonomy.vocabulary.tags
+id: node.object.field_subjects
+field_name: field_subjects
+entity_type: node
+bundle: object
+label: Subjects
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      tags: tags
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
