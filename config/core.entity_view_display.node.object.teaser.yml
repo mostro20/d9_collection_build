@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.object.field_accession_no_
     - field.field.node.object.field_creation_date_range
     - field.field.node.object.field_creator_list
+    - field.field.node.object.field_credit_line
     - field.field.node.object.field_date_created
     - field.field.node.object.field_department
     - field.field.node.object.field_dimensions
@@ -59,6 +60,7 @@ hidden:
   field_accession_no_: true
   field_creation_date_range: true
   field_creator_list: true
+  field_credit_line: true
   field_date_created: true
   field_department: true
   field_dimensions: true

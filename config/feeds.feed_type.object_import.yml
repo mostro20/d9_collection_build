@@ -15,7 +15,6 @@ dependencies:
     - field.field.node.object.field_image_reference
     - field.field.node.object.field_inter
     - field.field.node.object.field_medium_statement
-    - field.field.node.object.field_physical_location
     - field.field.node.object.field_place_created
     - field.field.node.object.field_secondary_type_category
     - field.field.node.object.field_source
@@ -60,7 +59,7 @@ processor_configuration:
   update_non_existent: _keep
   expire: -1
   owner_feed_author: false
-  owner_id: 2
+  owner_id: 1
   authorize: true
   skip_hash_check: false
   values:
@@ -271,13 +270,6 @@ mappings:
     settings:
       reference_by: name
       autocreate: '1'
-      language: null
-  -
-    target: field_physical_location
-    map:
-      value: qagoma_location
-    unique: {  }
-    settings:
       language: null
   -
     target: field_image_reference

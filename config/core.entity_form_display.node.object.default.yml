@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.object.field_accession_no_
     - field.field.node.object.field_creation_date_range
     - field.field.node.object.field_creator_list
+    - field.field.node.object.field_credit_line
     - field.field.node.object.field_date_created
     - field.field.node.object.field_department
     - field.field.node.object.field_dimensions
@@ -82,6 +83,14 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  field_credit_line:
+    weight: 34
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   field_date_created:
     type: string_textfield
     weight: 12
