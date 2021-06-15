@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <title>Algolia Block</title>
+    </head>
+    <body>
+        <!-- Block content for Algolia Instant Search to saturate -->
+        
+        <!-- Currently IE not supported, provide link to full listing page instead-->
+        <style type="text/css">
+        .ms-ie11 { display: none; } /* All non-IE11 Browsers */
+        @media all and (-ms-high-contrast:none)
+            {
+            *::-ms-backdrop, .ms-ie11 {
+            display: block
+            } /* IE11 */
+            }
+        </style>
+
+        <div class="ms-ie11 alert alert-info" role="alert">
+            <p><strong>NOTE: The search function is not currently available in Internet Explorer 11. Alternative access to all content is available from the <a href="#">full listing page</a>.</strong>
+        </div>
+
+        <!-- the following saturates from the Algolia index-->
+        <a name="searchBody"></a>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="header-box">
+                        <h2 class="sr-only">Search artworks</h2>
+                    </div>
+                    <div class="refine-results">
+                        <div class="float-right" id="hits-per-page"></div>
+                        <div id="current-refinements"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div id="searchbox"></div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div id="stats"></div>
+                    <div class="clearfix"></div>
+                    <div id="hits"></div>
+                    <div id="pagination"></div>
+                </div>
+            </div>
+        </div>
+    
+    <!-- The HTML above is built for the "simple" instant search, while there are facets and more data for the full object search -->
+    <!-- <script src="app-objects.js"></script> -->
+    <script src="app-simple.js"></script>
+    </body>
+</html>
