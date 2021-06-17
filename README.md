@@ -30,11 +30,16 @@ This repository exists to provide enough materials to rebuild QAGOMA's Collectio
   * Installed [Cantaloupe Image Server v5.0.2](https://cantaloupe-project.github.io/)
   * Command to start java -Dcantaloupe.config=/path/to/cantaloupe-5.0.2/cantaloupe.properties -jar cantaloupe-5.0.2/cantaloupe-5.0.2.jar 
   * Drupal dependency: OpenSeaDragon `composer require islandora/openseadragon:dev-8.x-1.x` (on GitHub)[https://github.com/Islandora/openseadragon]
+  * leaflet an alternative to OpenSeaDragon
 
 ### Libraries / 3rd parties
 
+Preferred plugins
   * BeerSlider
+  * Video
+  * StoryMap.js
+
+Plugins to be determined with best fit
   * Image Gallery
   * Image Zoom
   * SketchFab / Object
-  * Video
