@@ -6,12 +6,13 @@ dependencies:
     - 'block_content:basic:b7a8e70c-10ca-43c8-9da7-377260dad6c5'
   module:
     - block_content
+    - system
   theme:
     - qagoma_barrio
 id: algoliainsertionindexbody
 theme: qagoma_barrio
 region: content
-weight: -2
+weight: -3
 provider: null
 plugin: 'block_content:b7a8e70c-10ca-43c8-9da7-377260dad6c5'
 settings:
@@ -22,4 +23,8 @@ settings:
   status: true
   info: ''
   view_mode: full
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: /advanced-search
+    negate: true

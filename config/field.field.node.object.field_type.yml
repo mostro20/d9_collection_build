@@ -5,7 +5,7 @@ dependencies:
   config:
     - field.storage.node.field_type
     - node.type.object
-    - taxonomy.vocabulary.medium
+    - taxonomy.vocabulary.object_type
 id: node.object.field_type
 field_name: field_type
 entity_type: node
@@ -20,7 +20,7 @@ settings:
   handler: 'default:taxonomy_term'
   handler_settings:
     target_bundles:
-      media: media
+      object_type: object_type
     sort:
       field: name
       direction: asc

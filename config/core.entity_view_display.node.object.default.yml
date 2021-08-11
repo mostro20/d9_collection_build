@@ -14,6 +14,7 @@ dependencies:
     - field.field.node.object.field_dimensions
     - field.field.node.object.field_dimensions_b
     - field.field.node.object.field_edition
+    - field.field.node.object.field_external_references
     - field.field.node.object.field_format
     - field.field.node.object.field_high_resolution_image
     - field.field.node.object.field_image_carousel
@@ -27,6 +28,7 @@ dependencies:
     - field.field.node.object.field_physical_location
     - field.field.node.object.field_place_created
     - field.field.node.object.field_publisher
+    - field.field.node.object.field_rights
     - field.field.node.object.field_secondary_type_category
     - field.field.node.object.field_source
     - field.field.node.object.field_subjects
@@ -37,6 +39,7 @@ dependencies:
     - datetime_range
     - file
     - image
+    - link
     - text
     - user
 id: node.object.default
@@ -66,7 +69,7 @@ content:
     label: above
     settings:
       timezone_override: ''
-      date_format: 'j  F  Y'
+      date_format: 'Y'
       separator: '-'
     third_party_settings: {  }
   field_creator_list:
@@ -125,6 +128,18 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
+  field_external_references:
+    weight: 31
+    label: hidden
+    settings:
+      trim_length: null
+      target: _blank
+      url_only: false
+      url_plain: false
+      rel: '0'
+    third_party_settings: {  }
+    type: link
+    region: content
   field_format:
     type: string
     weight: 15
@@ -233,6 +248,14 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
+  field_rights:
+    weight: 30
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
   field_secondary_type_category:
     type: entity_reference_label
     weight: 8

@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.creator.feeds_item
     - field.field.node.creator.field_cultural_identity
     - field.field.node.creator.field_date_of_birth
     - field.field.node.creator.field_date_of_death
@@ -176,4 +177,5 @@ content:
       match_limit: 10
     region: content
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  feeds_item: true

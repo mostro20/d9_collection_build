@@ -16,6 +16,7 @@ dependencies:
     - field.field.node.object.field_inter
     - field.field.node.object.field_medium_statement
     - field.field.node.object.field_place_created
+    - field.field.node.object.field_rights
     - field.field.node.object.field_secondary_type_category
     - field.field.node.object.field_source
     - field.field.node.object.field_subjects
@@ -28,14 +29,14 @@ dependencies:
 third_party_settings:
   feeds_tamper:
     tampers:
-      55a45fb8-e688-4d40-8e41-54255495da58:
+      e59b65c0-790b-4204-b6bc-1381106c970e:
         separator: ;
         limit: null
         plugin: explode
-        source: subjects
+        source: subjects2
         weight: 0
         label: Explode
-        uuid: 55a45fb8-e688-4d40-8e41-54255495da58
+        uuid: e59b65c0-790b-4204-b6bc-1381106c970e
 id: object_import
 label: 'Object v2'
 description: ''
@@ -161,6 +162,22 @@ custom_sources:
     label: Creators
     value: Creators
     machine_name: creators
+  rights:
+    label: Rights
+    value: Rights
+    machine_name: rights
+  creator_list:
+    label: 'Creator List'
+    value: 'Creator List'
+    machine_name: creator_list
+  type:
+    label: Type
+    value: Type
+    machine_name: type
+  subjects2:
+    label: Subjects
+    value: Subjects
+    machine_name: subjects2
 mappings:
   -
     target: field_inter
@@ -279,14 +296,6 @@ mappings:
     settings:
       language: null
   -
-    target: field_subjects
-    map:
-      target_id: subjects
-    settings:
-      reference_by: name
-      autocreate: '1'
-      language: null
-  -
     target: field_medium_statement
     map:
       value: mediumtext
@@ -294,9 +303,24 @@ mappings:
     settings:
       language: null
   -
-    target: field_creator_list
+    target: field_rights
     map:
-      value: creators
+      value: rights
     unique: {  }
     settings:
       language: null
+  -
+    target: field_creator_list
+    map:
+      value: creator_list
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: field_subjects
+    map:
+      target_id: subjects2
+    settings:
+      language: ''
+      reference_by: name
+      autocreate: '1'

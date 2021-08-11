@@ -7,10 +7,9 @@ dependencies:
     - field.storage.node.body
     - field.storage.node.field_date
     - node.type.stories
-    - taxonomy.vocabulary.narrative_function
+    - taxonomy.vocabulary.story_type
   content:
-    - 'taxonomy_term:narrative_function:35a62050-eee7-43ee-90bf-7ce2179e6bed'
-    - 'taxonomy_term:narrative_function:384cd368-5ff9-4d75-b690-079dddaa1f42'
+    - 'taxonomy_term:story_type:783f08ce-a818-4089-b25a-5f98deb0afb4'
   module:
     - datetime
     - node
@@ -274,8 +273,8 @@ display:
           expose:
             operator_limit_selection: false
             operator_list: {  }
-        tid:
-          id: tid
+        tid_1:
+          id: tid_1
           table: taxonomy_index
           field: tid
           relationship: none
@@ -283,7 +282,7 @@ display:
           admin_label: ''
           operator: or
           value:
-            3: 3
+            2351: 2351
           group: 1
           exposed: false
           expose:
@@ -316,7 +315,7 @@ display:
           reduce_duplicates: false
           type: select
           limit: true
-          vid: narrative_function
+          vid: story_type
           hierarchy: false
           error_message: true
           plugin_id: taxonomy_index_tid
@@ -467,16 +466,16 @@ display:
           expose:
             operator_limit_selection: false
             operator_list: {  }
-        tid:
-          id: tid
-          table: taxonomy_index
-          field: tid
+        field_story_type_target_id:
+          id: field_story_type_target_id
+          table: node__field_story_type
+          field: field_story_type_target_id
           relationship: none
           group_type: group
           admin_label: ''
-          operator: or
+          operator: not
           value:
-            4: 4
+            2351: 2351
           group: 1
           exposed: false
           expose:
@@ -509,7 +508,7 @@ display:
           reduce_duplicates: false
           type: select
           limit: true
-          vid: narrative_function
+          vid: story_type
           hierarchy: false
           error_message: true
           plugin_id: taxonomy_index_tid
@@ -1026,16 +1025,16 @@ display:
           expose:
             operator_limit_selection: false
             operator_list: {  }
-        tid:
-          id: tid
-          table: taxonomy_index
-          field: tid
+        field_story_type_target_id:
+          id: field_story_type_target_id
+          table: node__field_story_type
+          field: field_story_type_target_id
           relationship: none
           group_type: group
           admin_label: ''
-          operator: or
+          operator: not
           value:
-            4: 4
+            2351: 2351
           group: 1
           exposed: false
           expose:
@@ -1068,7 +1067,7 @@ display:
           reduce_duplicates: false
           type: select
           limit: true
-          vid: narrative_function
+          vid: story_type
           hierarchy: false
           error_message: true
           plugin_id: taxonomy_index_tid

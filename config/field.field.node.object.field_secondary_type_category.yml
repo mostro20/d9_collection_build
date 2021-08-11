@@ -20,7 +20,7 @@ settings:
   handler: 'default:taxonomy_term'
   handler_settings:
     target_bundles:
-      media: media
+      medium: medium
     sort:
       field: name
       direction: asc

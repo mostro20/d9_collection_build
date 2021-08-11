@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.stories.body
+    - field.field.node.stories.feeds_item
     - field.field.node.stories.field_artist_stories
     - field.field.node.stories.field_author
     - field.field.node.stories.field_contributors
@@ -106,6 +107,7 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
+  feeds_item: true
   field_inter: true
   field_linked_event: true
   field_narrative_type: true

@@ -15,6 +15,7 @@ dependencies:
     - field.field.node.object.field_dimensions
     - field.field.node.object.field_dimensions_b
     - field.field.node.object.field_edition
+    - field.field.node.object.field_external_references
     - field.field.node.object.field_format
     - field.field.node.object.field_high_resolution_image
     - field.field.node.object.field_image_carousel
@@ -28,6 +29,7 @@ dependencies:
     - field.field.node.object.field_physical_location
     - field.field.node.object.field_place_created
     - field.field.node.object.field_publisher
+    - field.field.node.object.field_rights
     - field.field.node.object.field_secondary_type_category
     - field.field.node.object.field_source
     - field.field.node.object.field_subjects
@@ -66,6 +68,7 @@ hidden:
   field_dimensions: true
   field_dimensions_b: true
   field_edition: true
+  field_external_references: true
   field_format: true
   field_high_resolution_image: true
   field_image_carousel: true
@@ -79,6 +82,7 @@ hidden:
   field_physical_location: true
   field_place_created: true
   field_publisher: true
+  field_rights: true
   field_secondary_type_category: true
   field_source: true
   field_subjects: true
